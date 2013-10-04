@@ -1,0 +1,24 @@
+development:
+  adapter: mysql2
+  database: library_development
+  username: Ruby
+  password: j
+  host: localhost
+  port: 8083
+  socket: /Applications/MAMP/tmp/mysql/mysql.sock
+test:
+  adapter: mysql2
+  database: library_test
+  username: Ruby
+  password: j
+  host: localhost
+  port: 8083
+  socket: /Applications/MAMP/tmp/mysql/mysql.sock
+production:
+  adapter: mysql2
+  database: library_production
+  username: Ruby
+  password: j
+  host: localhost
+  port: 8083
+  socket: /Applications/MAMP/tmp/mysql/mysql.sock
