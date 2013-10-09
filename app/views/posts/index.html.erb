@@ -7,7 +7,7 @@
        Remove this if you use the .htaccess -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title>show.html</title>
+  <title>index.html</title>
   <meta name="description" content="">
   <meta name="author" content="Lead">
 
@@ -19,16 +19,21 @@
 </head>
 
 <body>
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
+<h1>Listing posts</h1>
  
-<p>
-  <strong>Text:</strong>
-  <%= @post.text %>
-</p>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
  
-<%= link_to 'Back', posts_path %>
+  <% @posts.each do |post| %>
+    <tr>
+      <td><%= post.title %></td>
+      <td><%= post.text %></td>
+    </tr>
+  <% end %>
+  <%= link_to 'New post', new_post_path %>
+</table>
 </body>
 </html>
